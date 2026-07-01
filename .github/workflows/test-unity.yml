@@ -77,7 +77,6 @@ jobs:
           testMode: ${{ matrix.mode }}
           artifactsPath: Tests~/Unity
           githubToken: ${{ secrets.GITHUB_TOKEN }}
-          checkName: 单元测试 Unity ${{ matrix.unity }} ${{ matrix.mode }}
 
       - name: 上传测试报告
         uses: actions/upload-artifact@v7
