@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "com.unity.ide.visualstudio": "2.0.26",
+    "com.unity.test-framework": "1.4.6",
+    "com.unity.modules.androidjni": "1.0.0",
+    "org.icsharpcode.sharpziplib": "1.4.1"
+  },
+  "scopedRegistries": [
+    {
+      "name": "OpenUPM",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "com.frameworkease",
+        "org.icsharpcode.sharpziplib"
+      ]
+    }
+  ]
+}

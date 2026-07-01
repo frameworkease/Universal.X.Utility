@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.1</TargetFrameworks>
+    <LangVersion>9.0</LangVersion>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SharpZipLib" Version="1.4.2" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <PackageId>FrameworkEase.Universal.X.Utility</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>FrameworkEase Technologies</Authors>
+    <Description>https://deepwiki.com/frameworkease/Universal.X.Utility</Description>
+    <PackageProjectUrl>https://deepwiki.com/frameworkease/Universal.X.Utility</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/frameworkease/Universal.X.Utility.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>FrameworkEase Universal Utility Extensions</PackageTags>
+    <Copyright>Copyright (c) 2026 FrameworkEase Technologies</Copyright>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../../../../LICENSE.md" Pack="true" PackagePath="" />
+    <None Include="../../../../README.md" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+</Project>

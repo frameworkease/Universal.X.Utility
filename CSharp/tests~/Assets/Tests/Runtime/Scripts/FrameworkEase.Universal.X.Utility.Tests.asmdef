@@ -1,0 +1,9 @@
+{
+    "name": "FrameworkEase.Universal.X.Utility.Tests",
+    "references": [
+        "FrameworkEase.Universal.X.Utility"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ]
+}

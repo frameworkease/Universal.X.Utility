@@ -1,0 +1,88 @@
+name: 单元测试（Unity）
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_unity:
+        description: "编译环境"
+        required: false
+        type: string
+        default: '["2021.3.45f2", "2022.3.62f3", "6000.3.18f1"]'
+      target_mode:
+        description: "测试模式"
+        required: false
+        type: string
+        default: '["PlayMode"]'
+  workflow_call:
+    secrets:
+      UNITY_LICENSE:
+        required: true
+      UNITY_EMAIL:
+        required: true
+      UNITY_PASSWORD:
+        required: true
+    inputs:
+      target_unity:
+        required: false
+        type: string
+        default: '["2021.3.45f2", "2022.3.62f3", "6000.3.18f1"]'
+      target_mode:
+        required: false
+        type: string
+        default: '["PlayMode"]'
+
+permissions:
+  checks: write
+  contents: read
+  actions: read
+  security-events: write
+
+jobs:
+  test:
+    name: 测试 Unity ${{ matrix.unity }}（${{ matrix.mode }}）环境
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        project:
+          - CSharp/tests~
+        unity: ${{ fromJson(github.event.inputs.target_unity || inputs.target_unity) }}
+        mode: ${{ fromJson(github.event.inputs.target_mode || inputs.target_mode) }}
+    env:
+      TZ: "Asia/Shanghai"
+
+    steps:
+      - name: 检出项目仓库
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: 检出项目缓存
+        uses: actions/cache@v5
+        with:
+          path: ${{ matrix.project }}/Library
+          key: Library-${{ runner.os }}-${{ hashFiles('**/ProjectSettings/ProjectVersion.txt') }}
+          restore-keys: |
+            Library-${{ runner.os }}-
+
+      - name: 运行单元测试
+        uses: game-ci/unity-test-runner@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          projectPath: ${{ matrix.project }}
+          unityVersion: ${{ matrix.unity }}
+          testMode: ${{ matrix.mode }}
+          artifactsPath: Tests~/Unity
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          checkName: 单元测试 Unity ${{ matrix.unity }} ${{ matrix.mode }}
+
+      - name: 上传测试报告
+        uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: Test#${{ github.run_number }}.Unity@${{ matrix.unity }}.${{ matrix.mode }}
+          path: Tests~/Unity
+          retention-days: 14
