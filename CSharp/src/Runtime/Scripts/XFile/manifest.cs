@@ -69,7 +69,7 @@ namespace FrameworkEase.Universal.X.Utility
 
             public virtual string Parse(string content)
             {
-                if (string.IsNullOrEmpty(content)) return "null content for parsing mainfest";
+                if (string.IsNullOrEmpty(content)) return "null content for parsing manifest";
                 else
                 {
                     try

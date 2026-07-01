@@ -84,7 +84,7 @@ func (m *Manifest) Stringify(pretty ...bool) string {
 
 func (m *Manifest) Parse(content []byte) error {
 	if len(content) == 0 {
-		return fmt.Errorf("null content for parsing mainfest")
+		return fmt.Errorf("null content for parsing manifest")
 	}
 	var files []*FileInfo
 	if err := json.Unmarshal(content, &files); err != nil {
