@@ -9,5 +9,3 @@
 文档、用法与架构说明请参阅 [DeepWiki](https://deepwiki.com/frameworkease/Universal.X.Utility)。
 
 [Releases](https://github.com/frameworkease/Universal.X.Utility/releases) 可通过 [OpenUPM](https://openupm.com/packages/com.frameworkease.universal.x.utility) 与 [NuGet](https://www.nuget.org/packages/FrameworkEase.Universal.X.Utility) 获取。
-
-Go 模块质量可在 [Go Report Card](https://goreportcard.com/report/github.com/frameworkease/Universal.X.Utility) 查看。
