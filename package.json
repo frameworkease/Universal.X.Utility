@@ -1,45 +1,45 @@
 {
-    "name": "com.frameworkease.universal.x.utility",
-    "displayName": "FrameworkEase Universal Utility Extensions",
-    "description": "https://deepwiki.com/frameworkease/Universal.X.Utility",
-    "version": "0.1.0",
-    "unity": "2021.3",
-    "license": "MIT",
-    "author": {
-        "name": "FrameworkEase Technologies",
-        "email": "frameworkease@outlook.com",
-        "url": "https://github.com/frameworkease"
-    },
-    "homepage": "https://deepwiki.com/frameworkease/Universal.X.Utility",
-    "documentationUrl": "https://deepwiki.com/frameworkease/Universal.X.Utility",
-    "changelogUrl": "https://github.com/frameworkease/Universal.X.Utility/releases",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/frameworkease/Universal.X.Utility.git"
-    },
-    "bugs": {
-        "url": "https://github.com/frameworkease/Universal.X.Utility/issues"
-    },
-    "keywords": [
-        "frameworkease",
-        "universal",
-        "x",
-        "utility"
-    ],
-    "files": [
-        "CSharp",
-        "CSharp.meta",
-        "LICENSE.md",
-        "LICENSE.md.meta",
-        "package.json",
-        "package.json.meta",
-        "README.md",
-        "README.md.meta"
-    ],
-    "dependencies": {},
-    "scripts": {
-        "unity-cli:open-project": "npx --yes @rage-against-the-pixel/unity-cli open-project",
-        "dotnet:pack": "mkdir -p Builds~ && dotnet pack -c Release -o ./Builds~",
-        "npm:pack": "mkdir -p Builds~ && npm pack --pack-destination ./Builds~"
-    }
+  "name": "com.frameworkease.universal.x.utility",
+  "displayName": "FrameworkEase Universal Utility Extensions",
+  "description": "https://deepwiki.com/frameworkease/Universal.X.Utility",
+  "version": "0.1.0",
+  "unity": "2021.3",
+  "license": "MIT",
+  "author": {
+    "name": "FrameworkEase Technologies",
+    "email": "frameworkease@outlook.com",
+    "url": "https://github.com/frameworkease"
+  },
+  "homepage": "https://deepwiki.com/frameworkease/Universal.X.Utility",
+  "documentationUrl": "https://deepwiki.com/frameworkease/Universal.X.Utility",
+  "changelogUrl": "https://github.com/frameworkease/Universal.X.Utility/releases",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frameworkease/Universal.X.Utility.git"
+  },
+  "bugs": {
+    "url": "https://github.com/frameworkease/Universal.X.Utility/issues"
+  },
+  "keywords": [
+    "frameworkease",
+    "universal",
+    "x",
+    "utility"
+  ],
+  "files": [
+    "CSharp",
+    "CSharp.meta",
+    "LICENSE.md",
+    "LICENSE.md.meta",
+    "package.json",
+    "package.json.meta",
+    "README.md",
+    "README.md.meta"
+  ],
+  "dependencies": {},
+  "scripts": {
+    "unity-cli:open-project": "npx --yes @rage-against-the-pixel/unity-cli open-project",
+    "dotnet:pack": "mkdir -p Builds~ && dotnet pack -c Release -o ./Builds~",
+    "npm:pack": "mkdir -p Builds~ && npm pack --pack-destination ./Builds~"
+  }
 }
