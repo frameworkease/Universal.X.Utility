@@ -1,9 +1,9 @@
 {
   "dependencies": {
     "com.frameworkease.universal.x.utility": {
-      "version": "file:../../../",
+      "version": "file:com.frameworkease.universal.x.utility",
       "depth": 0,
-      "source": "local",
+      "source": "embedded",
       "dependencies": {}
     },
     "com.unity.ext.nunit": {
