@@ -4,4 +4,3 @@
 [![Release](https://img.shields.io/github/v/tag/frameworkease/Universal.X.Utility?logo=github)](https://github.com/frameworkease/Universal.X.Utility/tags)
 [![OpenUPM](https://img.shields.io/npm/v/com.frameworkease.universal.x.utility?label=upm&logo=unity&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.frameworkease.universal.x.utility)
 [![NuGet](https://img.shields.io/nuget/v/FrameworkEase.Universal.X.Utility.svg?label=nuget&logo=nuget)](https://www.nuget.org/packages/FrameworkEase.Universal.X.Utility)
-[![GoReport](https://goreportcard.com/badge/github.com/frameworkease/Universal.X.Utility)](https://goreportcard.com/report/github.com/frameworkease/Universal.X.Utility)
